@@ -15,10 +15,10 @@ const handleUserInput = function (key) {
 
 const setupInput = function () {
   const stdin = process.stdin;
-  stdin.setRawMode(true);
+  stdin.setRawMode(true); cd
   stdin.setEncoding('utf8');
   stdin.resume();
-  stdin.on('data', handleUserInput(key));
+  stdin.on('data', handleUserInput)
   return stdin;
 }
 
