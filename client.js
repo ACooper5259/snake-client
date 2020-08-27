@@ -13,6 +13,7 @@ const connect = function () {
     console.log('Successfully connected to game server')
     conn.write('Name: ACO');
 
+
     // conn.write('Move: up');
     // conn.write('Move: up');
     // const upInterval = setInterval(() => conn.write('Move: up'), 100)
@@ -24,6 +25,8 @@ const connect = function () {
   conn.on('data', (data) => {
     console.log(data)
   });
+
+
 
   return conn;
 }

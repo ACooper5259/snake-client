@@ -12,12 +12,17 @@ const handleUserInput = function (key) {
     // console.log("UP")
     connection.write('Move: up')
   } else if (key === '\u0061') {
-    // console.log('left')
     connection.write('Move: left')
   } else if (key === '\u0064') {
     connection.write('Move: right')
   } else if (key === '\u0073') {
     connection.write('Move: down')
+  } else if (key === '\u006A') {
+    connection.write('Say: SOS')
+  } else if (key === '\u0069') {
+    connection.write('Say: is it dinner time?')
+  } else if (key === '\u006C') {
+    connection.write('Say: finally!')
   }
 }
 
@@ -32,15 +37,6 @@ const setUpInput = function (conn) {
   return stdin;
 }
 
-// setUpInput();
 
-// on.()
-
-// conn.write('Move: up');
-// conn.write('Move: up');
-// const upInterval = setInterval(() => conn.write('Move: up'), 100)
-// setTimeout(() => clearInterval(upInterval), 25000)
-// const rightInterval = setInterval(() => conn.write('Move: right'), 1000)
-// setTimeout(() => clearInterval(rightInterval), 5000)
 
 module.exports = { setUpInput };
